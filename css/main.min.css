@@ -550,6 +550,7 @@ i, .italic {
 }
 .caption-page h2 {
     margin: 0 0 20px;
+    font-weight: 700;
 }
 .caption-page__border {
     width: 50px;
@@ -557,7 +558,10 @@ i, .italic {
     background-color: #bfaa82;
     margin: 0 auto;
 }
-
+.lookbook__item--ticket a:hover,
+.lookbook__item--ticket a:active {
+    text-decoration: none;
+}
 .bordered.lside {
     text-align: left;
 }
@@ -3536,7 +3540,7 @@ input[type="checkbox"] {
     -webkit-box-flex: 0;
     flex-grow: 0;
     position: absolute;
-    z-index: 5;
+    z-index: 15;
     top: 0;
     bottom: 0;
     width: 42px;
@@ -5381,6 +5385,8 @@ h2 > div {
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 @media (min-width: 600px) {
@@ -5469,6 +5475,7 @@ h2 > div {
     height: 100%;
     left: 0;
     top: 0;
+    z-index: 11;
 }
 
 .lookbook__item--image .target {
@@ -8257,6 +8264,59 @@ h2 > div {
     min-height: 300px;
     color: #1d1d1b;
     height: 100vh;
+}
+.lookbook__item-wrapper::after {
+    content: "";
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.lookbook__item-wrapper:hover::after {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+
+}
+.lookbook__item-wrapper--slide1::after {
+    background-color: #595f6c;
+}
+.lookbook__item--image__wrap {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.lookbook__item--image__front {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.lookbook__item--image__back {
+    display: block;
+    width: 100%;
+    height: auto;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.lookbook__item-wrapper:hover .lookbook__item--image__back {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE 6-9 */
 }
 
 @media (min-width: 600px) {

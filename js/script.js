@@ -68,12 +68,13 @@ $(document).ready(function () {
         // loop: true,
         pagination: false,
         effect: 'fade',
+        loop: true,
         fadeEffect: {crossFade: true},
         navigation: {
             nextEl: '.arrow__right',
             prevEl: '.arrow__left',
         },
-        speed: 1000
+
     });
 
 
