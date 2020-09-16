@@ -1757,10 +1757,7 @@ y-axis
 }
 
 .mCSB_scrollTools .mCSB_draggerRail {
-    width: 2px;
-    height: 100%;
-    margin: 0 auto;
-    border-radius: 16px;
+    display: none;
 }
 
 .mCSB_scrollTools .mCSB_dragger {
@@ -3966,6 +3963,8 @@ input[type="checkbox"] {
 .header .top-menu svg {
     width: 20px;
     height: 20px;
+    -webkit-transition: .35s linear;
+    transition: .35s linear;
 }
 
 @media (min-width: 600px) {
@@ -8026,15 +8025,31 @@ h2 > div {
     color: #1d1d1b;
     opacity: 0;
     visibility: hidden;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 @media (min-width: 600px) {
     .cart {
         width: 50%;
-        padding: 60px 50px;
+        padding: 100px 50px 140px;
         min-width: 800px;
     }
+}
+.cart__header {
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 0 50px;
+}
+.cart__footer {
+    position: absolute;
+    z-index: 1;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    padding: 0 50px;
 }
 
 .cart.active {
@@ -8044,27 +8059,31 @@ h2 > div {
 }
 
 .cart__inner {
-    min-height: 100%;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    -webkit-box-flex: 0;
-    flex-grow: 0;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .cart__inner .h2 {
     margin-bottom: 40px;
 }
+.mCSB_draggerContainer::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.15);
+    left: 50%;
+    margin-left: -1px;
+}
 
 .cart__items {
-    height: 70vh;
+    height: 100%;
     overflow: hidden;
+    padding-right: 10px;
+    position: relative;
 }
 
 .cart__item {
@@ -8211,6 +8230,7 @@ h2 > div {
     top: 50px;
     right: 40px;
     cursor: pointer;
+    z-index: 10;
 }
 
 .cart__close svg {

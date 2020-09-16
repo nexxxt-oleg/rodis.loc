@@ -159,7 +159,10 @@ $(document).ready(function () {
 
     });*/
 
-    $('.cart__items').mCustomScrollbar();
+    $('.cart__items').mCustomScrollbar({
+        theme:"dark",
+        axis:"y"
+    });
 
     $(".collections__item").each(function (i) {
 
