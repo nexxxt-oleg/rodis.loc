@@ -3303,7 +3303,9 @@ yx-axis
 .animated-lnk:hover, .animated-lnk.active {
     text-decoration: none;
 }
-
+.bottom-menu__tab--inner .gift-collection__carousel--item .bottom-section .text-center {
+    margin-top: 0 !important;
+}
 .animated-lnk:hover::before, .animated-lnk:hover::after, .animated-lnk.active::before, .animated-lnk.active::after {
     width: 50%;
     opacity: 1;
@@ -4359,8 +4361,8 @@ input[type="checkbox"] {
     max-height: inherit;
     display: block;
     visibility: visible;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease 0.3s;
+    transition: all 0.5s ease 0.3s;
 }
 
 .dd-header-menu {
@@ -8012,16 +8014,19 @@ h2 > div {
 .cart {
     width: 100%;
     padding: 30px 20px;
-    -webkit-transition: all .8s ease-in-out;
-    transition: all .8s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
     box-sizing: border-box;
     position: fixed;
     z-index: 1000;
-    right: -100%;
+    right: -500px;
     top: 0;
     background: #fff;
     height: 100vh;
     color: #1d1d1b;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
 }
 
 @media (min-width: 600px) {
@@ -8034,10 +8039,12 @@ h2 > div {
 
 .cart.active {
     right: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 .cart__inner {
-    height: 100%;
+    min-height: 100%;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
