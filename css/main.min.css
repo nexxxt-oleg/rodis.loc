@@ -545,6 +545,18 @@ i, .italic {
     height: 1px;
     background: #bfaa82;
 }
+.caption-page {
+    padding-bottom: 30px;
+}
+.caption-page h2 {
+    margin: 0 0 20px;
+}
+.caption-page__border {
+    width: 50px;
+    height: 1px;
+    background-color: #bfaa82;
+    margin: 0 auto;
+}
 
 .bordered.lside {
     text-align: left;
@@ -3267,14 +3279,14 @@ yx-axis
     position: relative;
     padding-bottom: 10px;
 }
-.categories__item__header::after {
+/*.categories__item__header::after {
     content: "";
     display: block;
     margin: 0 auto;
     width: 50px;
     height: 1px;
     background: #bfaa82;
-}
+}*/
 .categories__item__header h2 {
     margin: 0 0 25px;
     padding: 0;
