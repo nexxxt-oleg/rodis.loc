@@ -3259,6 +3259,7 @@ yx-axis
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .animated-lnk::before, .animated-lnk::after {
@@ -3287,6 +3288,7 @@ yx-axis
 .categories__item__header h2 {
     margin: 0 0 25px;
     padding: 0;
+    font-weight: 700;
 }
 
 .animated-lnk::before {
@@ -3333,9 +3335,13 @@ yx-axis
     text-decoration: none;
     background: #1d1d1b;
     cursor: pointer;
-    color: #fff;
+    color: #fff !important;
 }
-
+.soc-icons a:hover svg {
+    opacity: 0.8;
+    -webkit-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
 .btn.btn-black {
     background: #1d1d1b;
     color: #fff;
@@ -5282,7 +5288,6 @@ h2 > div {
 
 .gift-collection__carousel--item:hover .bottom-section a:hover, .gift-collection__carousel--item.hovered .bottom-section a:hover {
     text-decoration: none;
-    opacity: .8;
 }
 
 .gift-collection__carousel--item:hover .like,

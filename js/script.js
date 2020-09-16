@@ -131,19 +131,19 @@ $(document).ready(function () {
 
     $('.show-search').click(() => {
         showModalListener();
-        $('.header__search').slideDown(800);
+        $('.header__search').fadeIn();
     });
     $('.header__search--close, .modal-close-listener').click(() => {
         hideModalListener();
-        $('.header__search').slideUp(800);
+        $('.header__search').fadeOut();
     });
 
     $('.show-dd-header-menu').click(() => {
-        $('.dd-header-menu').slideDown(800);
+        $('.dd-header-menu').fadeIn();
         $('body').css('overflow', 'hidden');
     });
     $('.dd-header-menu__close').click(() => {
-        $('.dd-header-menu').slideUp(800);
+        $('.dd-header-menu').fadeOut();
         $('body').css('overflow', '');
     });
 
