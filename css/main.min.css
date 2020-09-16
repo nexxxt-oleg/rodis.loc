@@ -540,9 +540,7 @@ i, .italic {
 .bordered::after {
     content: '';
     display: block;
-    position: absolute;
-    bottom: 0;
-    left: calc(50% - 25px);
+   margin: 15px auto 0;
     width: 50px;
     height: 1px;
     background: #bfaa82;
@@ -3257,13 +3255,29 @@ yx-axis
 .animated-lnk::before, .animated-lnk::after {
     content: "";
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     width: 0;
     height: 1px;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     opacity: 0;
     background-color: #1d1d1b;
+}
+.categories__item__header {
+    position: relative;
+    padding-bottom: 10px;
+}
+.categories__item__header::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 1px;
+    background: #bfaa82;
+}
+.categories__item__header h2 {
+    margin: 0 0 25px;
+    padding: 0;
 }
 
 .animated-lnk::before {
@@ -4217,7 +4231,6 @@ input[type="checkbox"] {
 .bottom-menu__list--item {
     font-size: 14px;
     margin: 0 20px;
-    padding-bottom: 14px;
     font-family: 'Arsenal', 'Open Sans', Arial, sans-serif;
     font-weight: 400;
 }
@@ -4253,16 +4266,18 @@ input[type="checkbox"] {
     visibility: hidden;
     display: block;
     max-height: 0;
-    padding: 60px 0;
     background: #fff;
     left: 0;
     right: 0;
-    top: calc(100% - 12px);
+    top: 100%;
     overflow: hidden;
     border-top: 1px solid #a8a8a7;
     box-shadow: 0 3px 3px #bbbbba;
     font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
     font-weight: 400;
+}
+.bottom-menu__tab .bottom-menu__tab--inner {
+    padding: 60px 0;
 }
 
 .bottom-menu__tab > .text-uppercase {
@@ -4562,15 +4577,37 @@ input[type="checkbox"] {
     width: 100%;
     overflow: hidden;
 }
-.categories__item__wrap {
-    --animate-duration: 0.5s;
-}
+
 .categories__item__footer {
     overflow: hidden;
 }
-.categories__item__footer .wow {
-    --animate-delay: 0.4s;
+.animate__delay-05s {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
+.footer__logo-wrap {
+    padding-top: 30px;
+    height: 50px;
+    border-bottom: 1px solid #bbbbba;
+}
+.footer__logo-wrap .footer__logo-link {
+    position: relative;
+    z-index: 10;
+    display: block;
+    margin: 0 auto -30px;
+    width: 40px;
+    background-color: #fff;
+    text-align: center;
+    height: 40px;
+}
+.footer__logo-wrap .footer__logo-link svg {
+    margin: 0 auto;
+    width: 20px;
+    height: auto;
+    display: block;
+    height: 40px;
+}
+
 
 
 @keyframes shake-little {
@@ -4736,7 +4773,7 @@ input[type="checkbox"] {
 .main-wrap__body {
     position: relative;
     z-index: 10;
-    margin-bottom: 550px;
+    margin-bottom: 570px;
     background-color: #fff;
 }
 .main-wrap__footer {
