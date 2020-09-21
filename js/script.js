@@ -265,7 +265,7 @@ $(document).ready(function () {
         $('.cart').removeClass('active');
     })
 
-    if($( window ).width() > 1280 && $('.parallax-background').length > 0) {
+    /*if($( window ).width() > 1280 && $('.parallax-background').length > 0) {
         var $el = $('.parallax-background');
         $(window).on('scroll', function () {
             var scroll = $(document).scrollTop();
@@ -273,7 +273,7 @@ $(document).ready(function () {
                 'background-position':'50% '+(-.2*scroll)+'px'
             });
         });
-    }
+    }*/
 
 });
 
