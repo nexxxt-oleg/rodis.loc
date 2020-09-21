@@ -280,7 +280,7 @@ $(document).ready(function () {
 $(window).on("load", () => {
     let md = new MobileDetect(window.navigator.userAgent);
     if (md.mobile() && $( window ).width() < 768) {
-        /*new Accordion(['.footer__nav'], {
+        new Accordion(['.footer__nav'], {
             duration: 500,
             onToggle: function (currentElement, allElements) {
             }
@@ -290,7 +290,7 @@ $(window).on("load", () => {
         });
         $('.go-back').click(function () {
             $(this).parent('.sub-nav').removeClass('active');
-        })*/
+        })
 
         // if ($('.product-view__inner').length){
         //     var mySwiper = new Swiper ('.product-view__item', {

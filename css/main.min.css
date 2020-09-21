@@ -8653,10 +8653,13 @@ ul, li {
     .footer .footer__nav {
         flex-wrap: wrap;
     }
-
+    .dd-header-menu__close {
+        margin-right: -500px;
+    }
     .header .top-menu,
     .footer__nav,
-    .footer__social--inner {
+    .footer__social--inner,
+    .dd-header-menu {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -8671,6 +8674,19 @@ ul, li {
     }
 
 }
+
+@media (max-width: 1010px) {
+    .dd-header-menu--inner {
+        flex-wrap: wrap;
+    }
+    .dd-header-menu__col {
+        flex-basis: 33.3334%;
+    }
+    .dd-header-menu__close {
+        margin-right: -300px;
+    }
+}
+
 @media (max-width: 767px) {
     .footer__nav--col ul {
         display: none !important;
