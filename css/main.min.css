@@ -8647,9 +8647,8 @@ ul, li {
     .footer .footer__nav--col,
     .footer .footer__nav--col.fb-sm,
     .footer .footer__nav--col.fb-md {
-        flex-basis: 100% ;
-        min-width: 100%;
-        text-align: center;
+        flex-basis: 33.3334% ;
+        min-width: 33.3334%;
     }
     .footer .footer__nav {
         flex-wrap: wrap;
@@ -8679,5 +8678,12 @@ ul, li {
     .container.footer {
         padding-left: 30px;
         padding-right: 30px;
+    }
+    .footer .footer__nav--col,
+    .footer .footer__nav--col.fb-sm,
+    .footer .footer__nav--col.fb-md {
+        flex-basis: 100% ;
+        min-width: 100%;
+        text-align: center;
     }
 }
