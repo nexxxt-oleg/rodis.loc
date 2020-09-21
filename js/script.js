@@ -42,6 +42,7 @@ $(document).ready(function () {
 
     const heroSwiper = new Swiper('.hero.swiper-container', {
         loop: true,
+        speed: 1000,
         pagination: {
             el: '.slide-check',
             bulletElement: 'li',
@@ -56,7 +57,7 @@ $(document).ready(function () {
         },
     });
 
-    heroSwiper.on('transitionEnd', function () {
+    heroSwiper.on('transitionStart', function () {
         let slideIndex = heroSwiper.realIndex;
         $('.hero-wrapper').removeClass('invert-hero-slide');
         if (slideIndex == 1) {
@@ -69,6 +70,7 @@ $(document).ready(function () {
         pagination: false,
         effect: 'fade',
         loop: true,
+        speed: 1000,
         fadeEffect: {crossFade: true},
         navigation: {
             nextEl: '.arrow__right',
@@ -274,7 +276,7 @@ $(document).ready(function () {
 
 $(window).on("load", () => {
     let md = new MobileDetect(window.navigator.userAgent);
-    if (md.mobile()) {
+    if (md.mobile() && $( window ).width() < 768) {
         new Accordion(['.footer__nav'], {
             duration: 500,
             onToggle: function (currentElement, allElements) {

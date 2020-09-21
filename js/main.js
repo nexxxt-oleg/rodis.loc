@@ -1578,7 +1578,8 @@ $(document).ready(function () {
 
 $(window).on("load", () => {
     let md = new MobileDetect(window.navigator.userAgent);
-    if (md.mobile()) {
+    if (md.mobile() && $( window ).width() < 768) {
+        console.log('1111');
         new Accordion(['.footer__nav'], {
             duration: 500,
             onToggle: function (currentElement, allElements) {
