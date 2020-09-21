@@ -430,10 +430,10 @@ a.lighten-lnk {
     -webkit-transition: .35s ease-in-out;
     transition: .35s ease-in-out;
 }
-
+/*
 a.lighten-lnk:hover {
     color: rgba(29, 29, 27, 0.6) !important;
-}
+}*/
 
 .dotted {
     border-bottom: 1px dotted currentColor;
@@ -4305,14 +4305,17 @@ input[type="checkbox"] {
     padding: 60px 0;
 }
 .bottom-menu__tab--inner li a,
-.footer__nav--col li a {
+.footer__nav--col li a,
+.dd-header-menu a {
     position: relative;
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
 }
+
 .bottom-menu__tab--inner li a::after,
-.footer__nav--col li a::after {
+.footer__nav--col li a::after,
+.dd-header-menu a::after {
     content: "";
     display: block;
     width: 0;
@@ -4326,11 +4329,15 @@ input[type="checkbox"] {
     bottom: 0;
 }
 .bottom-menu__tab--inner li a:hover::after,
-.footer__nav--col li a:hover::after {
+.footer__nav--col li a:hover::after,
+.dd-header-menu a:hover::after {
     content: "";
     display: block;
     width: 100%;
     left: 0;
+}
+.dd-header-menu .soc-icons a::after {
+    display: none !important;
 }
 .bottom-menu__tab > .text-uppercase {
     font-family: 'Arsenal', 'Open Sans', Arial, sans-serif;
@@ -5027,6 +5034,8 @@ h2 > div {
     position: relative;
     font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
     font-weight: 400;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out ;
 }
 
 @media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
@@ -8638,8 +8647,9 @@ ul, li {
     .footer .footer__nav--col,
     .footer .footer__nav--col.fb-sm,
     .footer .footer__nav--col.fb-md {
-        flex-basis: 33.3334% ;
-        min-width: 33.3334%;
+        flex-basis: 100% ;
+        min-width: 100%;
+        text-align: center;
     }
     .footer .footer__nav {
         flex-wrap: wrap;
@@ -8662,4 +8672,12 @@ ul, li {
     }
 
 }
-
+@media (max-width: 767px) {
+    .footer__nav--col ul {
+        display: none !important;
+    }
+    .container.footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

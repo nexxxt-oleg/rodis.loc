@@ -265,19 +265,22 @@ $(document).ready(function () {
         $('.cart').removeClass('active');
     })
 
-    var $el = $('.parallax-background');
-    $(window).on('scroll', function () {
-        var scroll = $(document).scrollTop();
-        $el.css({
-            'background-position':'50% '+(-.1*scroll)+'px'
+    if($( window ).width() > 1280 && $('.parallax-background').length > 0) {
+        var $el = $('.parallax-background');
+        $(window).on('scroll', function () {
+            var scroll = $(document).scrollTop();
+            $el.css({
+                'background-position':'50% '+(-.2*scroll)+'px'
+            });
         });
-    });
+    }
+
 });
 
 $(window).on("load", () => {
     let md = new MobileDetect(window.navigator.userAgent);
     if (md.mobile() && $( window ).width() < 768) {
-        new Accordion(['.footer__nav'], {
+        /*new Accordion(['.footer__nav'], {
             duration: 500,
             onToggle: function (currentElement, allElements) {
             }
@@ -287,7 +290,7 @@ $(window).on("load", () => {
         });
         $('.go-back').click(function () {
             $(this).parent('.sub-nav').removeClass('active');
-        })
+        })*/
 
         // if ($('.product-view__inner').length){
         //     var mySwiper = new Swiper ('.product-view__item', {
