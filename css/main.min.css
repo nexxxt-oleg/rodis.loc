@@ -5126,8 +5126,8 @@ h2 > div {
 .collections__item img {
     width: 100%;
     display: block;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
