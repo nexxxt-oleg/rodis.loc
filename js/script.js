@@ -134,11 +134,12 @@ $(document).ready(function () {
 
     $('.show-search').click(() => {
         showModalListener();
-        $('.header__search').fadeIn();
+        $('.header__search, .header__search__mask').fadeIn();
+        $('.header__search--inner input').focus();
     });
-    $('.header__search--close, .modal-close-listener').click(() => {
+    $('.header__search--close, .modal-close-listener, .header__search__mask').click(() => {
         hideModalListener();
-        $('.header__search').fadeOut();
+        $('.header__search, .header__search__mask').fadeOut();
     });
 
     $('.show-dd-header-menu').click(() => {

@@ -4527,6 +4527,17 @@ input[type="checkbox"] {
     color: #1d1d1b;
     z-index: 10;
 }
+.header__search__mask {
+    position: fixed;
+    cursor: pointer;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
 
 @media (min-width: 1200px) {
     .main-wrap.out .header-wrapper {
