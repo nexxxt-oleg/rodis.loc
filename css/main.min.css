@@ -6373,13 +6373,38 @@ h2 > div {
     flex-grow: 0;
     padding: 40px 0;
 }
-
+.catalog-list__item--preview::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f6f4f0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f4f0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#f6f4f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f4f0',GradientType=0 ); /* IE6-9 */
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.catalog-list__item:hover .catalog-list__item--preview::after {
+    width: 100%;
+}
 .catalog-list__item--preview img {
     max-width: 180px;
     display: block;
     margin: auto;
+    position: relative;
+    z-index: 10;
 }
-
+.catalog-list__item--preview .price {
+    position: relative;
+    z-index: 10;
+}
 .catalog-list__item--preview .price svg {
     height: 11px;
     width: 10px;
@@ -6387,7 +6412,7 @@ h2 > div {
 
 .catalog-list__item--preview .like-ico {
     position: absolute;
-    z-index: 2;
+    z-index: 20;
     right: 10px;
     top: 23%;
     -webkit-transition: .45s linear;
@@ -6415,9 +6440,15 @@ h2 > div {
     padding: 20px;
     margin-bottom: 40px;
     width: 100%;
-    background: #f7f6f3;
-    -webkit-transition: .2s linear;
-    transition: .2s linear;
+    background: #f6f4f0; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f6f4f0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f4f0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#f6f4f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f4f0',GradientType=0 ); /* IE6-9 */
+    -webkit-transition: all 0.2s ease-out 0.25s;
+    -moz-transition: all 0.2s ease-out 0.25s;
+    -o-transition: all 0.2s ease-out 0.25s;
+    transition: all 0.2s ease-out 0.25s;
 }
 
 @media (min-width: 1200px) {
@@ -6470,7 +6501,6 @@ h2 > div {
 }
 
 .catalog-list__item:hover {
-    background: #f7f6f3;
     z-index: 4;
     overflow: visible;
 }
@@ -6480,7 +6510,7 @@ h2 > div {
 }
 
 .catalog-list__item:hover .catalog-list__item--preview {
-    background: #f7f6f3;
+
 }
 
 .catalog-list__item:hover .catalog-list__item--details {
@@ -6495,7 +6525,10 @@ h2 > div {
     z-index: 1;
     padding-right: 20px;
 }
-
+.catalog-list__item:nth-child(4n + 4) .catalog-list__item--preview::after {
+    left: auto;
+    right: 0;
+}
 .catalog-list__item:nth-child(4n + 4):hover .catalog-list__item--details {
     left: -100%;
 }
