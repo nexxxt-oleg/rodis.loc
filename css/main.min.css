@@ -9071,4 +9071,7 @@ ul, li {
     .catalog-filter__sort-list ul {
         min-width: 120px;
     }
+    .spacer--not-mob {
+        display: none !important;
+    }
 }

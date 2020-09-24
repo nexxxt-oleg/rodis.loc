@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     const heroSwiper = new Swiper('.hero.swiper-container', {
         loop: true,
-        speed: 1000,
+        speed: 2000,
         pagination: {
             el: '.slide-check',
             bulletElement: 'li',
