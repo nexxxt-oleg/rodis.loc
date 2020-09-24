@@ -1834,7 +1834,8 @@
 
 .animate__fadeInUp {
     -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp
+    animation-name: fadeInUp;
+    transition-timing-function: ease-in;
 }
 
 @-webkit-keyframes fadeInUpBig {

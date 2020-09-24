@@ -6060,7 +6060,6 @@ h2 > div {
     right: 20px;
     top: 20px;
     color: #bfaa82;
-    overflow: hidden;
 }
 
 @media (min-width: 1200px) {
@@ -8956,6 +8955,48 @@ ul, li {
 .catalog-filter__sort-list ul li a {
     display: block;
     line-height: 20px;
+}
+.cursor-pointer--sharing {
+    position: relative;
+}
+.social {
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.social.active {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 5px;
+}
+.social__share {
+    display: block;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.social__share img {
+    display: block;
+    width: 24px;
+    height: auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+.social.active .social__share img {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    margin-top: 5px;
 }
 
 @media (max-width: 1240px) {
