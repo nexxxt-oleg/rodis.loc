@@ -1578,7 +1578,7 @@ $(document).ready(function () {
 
 $(window).on("load", () => {
     let md = new MobileDetect(window.navigator.userAgent);
-    if (md.mobile() && $( window ).width() < 768) {
+    if (md.mobile() && $( window ).width() < 600) {
         console.log('1111');
         new Accordion(['.footer__nav'], {
             duration: 500,
@@ -1606,6 +1606,7 @@ $(window).on("load", () => {
         // }
 
     } else {
+        console.log('stickySidebar');
         $('#stickySidebar').stickySidebar({
             topSpacing: 0,
             // bottomSpacing: 0,

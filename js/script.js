@@ -458,7 +458,7 @@ $(document).ready(function () {
 
 $(window).on("load", () => {
     let md = new MobileDetect(window.navigator.userAgent);
-    if (md.mobile() && $( window ).width() < 768) {
+    if (md.mobile() && $( window ).width() < 600) {
         new Accordion(['.footer__nav'], {
             duration: 500,
             onToggle: function (currentElement, allElements) {
@@ -471,18 +471,18 @@ $(window).on("load", () => {
             $(this).parent('.sub-nav').removeClass('active');
         })
 
-        // if ($('.product-view__inner').length){
-        //     var mySwiper = new Swiper ('.product-view__item', {
-        //         loop: true,
-        //         speed: 600,
-        //         pagination: {
-        //             el: '.swiper-pagination',
-        //         },
-        //         autoplay: {
-        //             delay: 2000,
-        //         }
-        //     })
-        // }
+        if ($('.js-product-view-img').length){
+            $('.product-view__item--holder').addClass('swiper-wrapper');
+            $('.product-view__item__slide').addClass('swiper-slide');
+            var mySwiper = new Swiper ('.js-product-view-img', {
+                loop: true,
+                speed: 600,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            })
+        }
+
 
     } else {
         $('#stickySidebar').stickySidebar({
@@ -491,8 +491,6 @@ $(window).on("load", () => {
             resizeSensor: true,
             containerSelector: '.sticky-container',
             innerWrapperSelector: '.sticky-inner',
-
-
             bottomSpacing: 50
         });
     }

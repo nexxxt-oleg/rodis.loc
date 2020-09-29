@@ -615,8 +615,20 @@ i, .italic {
 .bordered.lside::after {
     left: 0;
     width: 100px;
+    margin-left: 0 !important;
 }
-
+.product-view__desc__size-value {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+.product-view__desc__size-value input {
+    display: none;
+}
+.product-view__desc__size-value input:checked + .btn {
+    color: #fff;
+    background-color: #1d1d1b;
+}
 .bordered.large::after {
     height: 2px;
     width: 80px;
@@ -6105,11 +6117,15 @@ h2 > div {
     font-size: 12px;
 }
 
-.product-view__desc h2 {
+.product-view__desc h2,
+.product-view__title {
     margin: 10px 0 20px;
     font-weight: 600;
 }
-
+.product-view__title {
+    font-size: 30px;
+    font-family: 'Arsenal', 'Open Sans', Arial, sans-serif;
+}
 .product-view__desc--size {
     margin: 14px 0;
 }
@@ -6118,7 +6134,13 @@ h2 > div {
     width: 60px;
     text-align: center;
 }
-
+.product-view__caption-box {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.caption-page__border.caption-page__border--left {
+    margin-left: 0;
+}
 .product-view__desc--price {
     display: -webkit-box;
     display: flex;
@@ -6649,8 +6671,8 @@ h2 > div {
         z-index: 1;
         padding-left: 20px;
         visibility: visible;
-        -webkit-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
     }
     .catalog-list__item:nth-child(4n + 4) .catalog-list__item--details {
         left: 0;
@@ -8998,6 +9020,9 @@ ul, li {
     -o-transform: scale(1);
     margin-top: 5px;
 }
+.breadcrumbs__list {
+    padding-top: 20px;
+}
 
 @media (max-width: 1240px) {
     .footer .footer__nav--col,
@@ -9114,5 +9139,37 @@ ul, li {
     }
     .spacer--not-mob {
         display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-view__item {
+        background: #f6f4f0;
+    }
+    .product-view__desc--tabs {
+        justify-content: space-between;
+        letter-spacing: normal;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #000 !important;
+    }
+    .product-view__desc--price,
+    .product-view__info-links {
+        flex-direction: column;
+    }
+    .product-view__desc--price .btn-holder {
+        margin: 15px 0 0 0;
+    }
+    .product-view__info-links a {
+        padding: 0;
+    }
+    .product-view__info-links {
+        padding-top: 30px;
+    }
+    .lookbook__item--ticket {
+        min-height: 350px;
+    }
+    .product-view__title {
+        font-size: 24px;
     }
 }
