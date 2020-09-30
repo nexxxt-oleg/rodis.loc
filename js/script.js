@@ -522,6 +522,50 @@ $(window).on("load", () => {
     $('.cursor-pointer--sharing').on('click', function(){
         $('.social').toggleClass('active');
     });
+
+    if ($("#modalQuestion").length > 0) {
+        $("#modalQuestion").iziModal({
+            width: 650,
+            radius: 0,
+        });
+    }
+
+    if ($("#modalCallback").length > 0) {
+        $("#modalCallback").iziModal({
+            width: 650,
+            radius: 0,
+        });
+
+        $("#formCallback").validate({
+            errorElement: "span",
+            messages: {
+                name: {
+                    required: "Укажите имя",
+                },
+                tel: {
+                    required: "Укажите номер телефона",
+                },
+
+            },
+            submitHandler: function () {
+                /*$("#modal-reg-web").iziModal('close');
+                $('#modal-thanks').iziModal('open');
+                return false;*/
+            }
+        });
+    }
+
+    $('.js-razmer').on('input', function () {
+        if($(this).val() == 0) {
+            $('.razmer-result__ok').addClass('razmer-result__hidden');
+            $('.razmer-result__error').removeClass('razmer-result__hidden');
+        } else {
+            $('.razmer-result__ok').removeClass('razmer-result__hidden');
+            $('.razmer-result__error').addClass('razmer-result__hidden');
+        }
+    });
+
+    $('.modal-form__inp--tel').mask("+7 (999) 999-99-99");
 });
 
 var wow = new WOW(

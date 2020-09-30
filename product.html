@@ -8,7 +8,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 
     <title>Rodis</title>
 </head>
@@ -594,7 +594,9 @@
                     </header>
                     <b>
                         Размер кольца
-                        <span class="question-ico">?</span>
+                        <span class="question-ico"
+                              data-izimodal-open="#modalQuestion"
+                              data-izimodal-transitionin="fadeInDown">?</span>
                     </b>
                     <div class="product-view__desc--size">
                         <label class="product-view__desc__size-value">
@@ -677,7 +679,12 @@
     </section>
     <div class="spacer"></div>
     <div class="gift-collection">
-        <h2 class="bordered text-center p20">Подборка подарков для нее и для него</h2>
+        <div class="categories__item__header ">
+            <h2 class="text-center wow animate__fadeInUp animate__delay-05s">
+                Подборка подарков для нее и для него
+            </h2>
+            <div class="caption-page__border wow animate__zoomIn"></div>
+        </div>
         <div class="gift-collection__carousel owl-carousel">
             <div class="gift-collection__carousel--item">
                 <a href="" class="like">
@@ -1003,74 +1010,94 @@
     </div>
     <div class="spacer"></div>
     <section class="lookbook">
-        <h2 class="bordered text-center">Look Book</h2>
-        <div class="lookbook__wrapper">
-            <div action="" class="swiper-wrapper">
+    <header class="caption-page">
+        <h2 class="text-center wow animate__fadeInUp animate__delay-05s">Look Book</h2>
+        <div class="caption-page__border wow animate__zoomIn"></div>
+    </header>
+    <div class="lookbook__wrapper">
+        <div class="swiper-wrapper">
 
-                <div class="lookbook__item-wrapper swiper-slide" style="background: #3e3e3e">
-
+            <div class="swiper-slide" >
+                <div class="lookbook__item-wrapper lookbook__item-wrapper--slide1">
                     <div class="lookbook__item">
                         <div class="lookbook__item--holder">
-                            <div class="lookbook__item--ticket toggle-1" data-ciaoyu-toggle='one1'>
-                                <div>
-                                    <span class="text-uppercase small">Коллекция</span>
-                                    <h3 class="title">Ландышы</h3>
-                                </div>
-                                <img src="./img/lookbok-item.jpg"
-                                     srcset="./img/lookbok-item@2x.jpg 2x"
-                                     width="182"
-                                     height="255" alt="">
-                                <div class="text-uppercase">
-                                    СЕРЬГИ “ЛАНДЫШИ” 1
-                                </div>
-                                <div>
-                                    <i class="small">Золото 585 пробы</i>
-                                </div>
-                                <div class="collect-actions">
-                                    <div class="price">
-                                        80 000
-                                        <svg>
-                                            <use xlink:href="#Rub"></use>
-                                        </svg>
-                                    </div>
-                                    <a class="btn">
-                                        Купить
+                            <div class="toggle-1" data-ciaoyu-toggle='one1'>
+                                <div class="lookbook__item--ticket">
+                                    <a href="" class="lookbook__item__caption">
+                                        <span class="text-uppercase small">Коллекция</span>
+                                        <h3 class="title">Ландыши</h3>
                                     </a>
+                                    <a href="" class="lookbook__item__img">
+                                        <img src="./img/lookbok-item.jpg"
+                                             srcset="./img/lookbok-item@2x.jpg 2x"
+                                             width="182"
+                                             height="225" alt="">
+                                    </a>
+                                    <a href="" class="text-uppercase lookbook__item__title">
+                                        СЕРЬГИ “ЛАНДЫШИ” 1
+                                    </a>
+                                    <div>
+                                        <i class="small">Золото 585 пробы</i>
+                                    </div>
+                                    <div class="collect-actions">
+                                        <div class="price">
+                                            80 000
+                                            <svg>
+                                                <use xlink:href="#Rub"></use>
+                                            </svg>
+                                        </div>
+                                        <a class="btn">
+                                            Купить
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="lookbook__item--ticket toggle-1" data-ciaoyu-toggle='two1'>
-                                <div>
-                                    <span class="text-uppercase small">Коллекция</span>
-                                    <h3 class="title">Ландыши</h3>
-                                </div>
-                                <img src="./img/lookbok-item.jpg"
-                                     srcset="./img/lookbok-item.jpg 2x"
-                                     width="182"
-                                     height="255" alt="">
-                                <div class="text-uppercase">
-                                    Кольцо “ЛАНДЫШ” 2
-                                </div>
-                                <div>
-                                    <i class="small">Золото 585 пробы</i>
-                                </div>
-                                <div class="collect-actions">
-                                    <div class="price">
-                                        80 000
-                                        <svg>
-                                            <use xlink:href="#Rub"></use>
-                                        </svg>
-                                    </div>
-                                    <a class="btn">
-                                        Купить
+                            <div class="toggle-1" data-ciaoyu-toggle='two1'>
+                                <div class="lookbook__item--ticket">
+                                    <a href="" class="lookbook__item__caption">
+                                        <span class="text-uppercase small">Коллекция</span>
+                                        <h3 class="title">Ландыши</h3>
                                     </a>
+                                    <a href="" class="lookbook__item__img">
+                                        <img src="./img/lookbok-item.jpg"
+                                             srcset="./img/lookbok-item.jpg 2x"
+                                             width="182"
+                                             height="225" alt="">
+                                    </a>
+                                    <a href="" class="text-uppercase lookbook__item__title">
+                                        Кольцо “ЛАНДЫШ” 2
+                                    </a>
+                                    <div>
+                                        <i class="small">Золото 585 пробы</i>
+                                    </div>
+                                    <div class="collect-actions">
+                                        <div class="price">
+                                            80 000
+                                            <svg>
+                                                <use xlink:href="#Rub"></use>
+                                            </svg>
+                                        </div>
+                                        <a class="btn">
+                                            Купить
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="lookbook__item--image arrows-holder">
-                            <img src="./img/lookbook.png"
-                                 srcset="./img/lookbook@2x.png 2x"
-                                 alt="">
+                            <figure class="lookbook__item--image__wrap">
+                                <img src="./img/lookbook.png"
+                                     srcset="./img/lookbook@2x.png 2x"
+                                     alt=""
+                                     class="lookbook__item--image__back"
+                                >
+                                <img src="./img/lookbook_1.png"
+                                     srcset="./img/lookbook_1@2x.png 2x"
+                                     alt=""
+                                     class="lookbook__item--image__front"
+                                >
+                            </figure>
                             <form class="target-list">
                                 <label class="target" style="left: 38%; top: 73%;">
                                     <input type='radio'
@@ -1119,50 +1146,26 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="lookbook__item-wrapper swiper-slide" style="background: #657888">
-                    <div class="lookbook__item">
-                        <div class="lookbook__item--holder">
-                            <div class="lookbook__item--ticket" data-ciaoyu-toggle='one2'>
-                                <div>
-                                    <span class="text-uppercase small">Коллекция</span>
-                                    <h3 class="title">Ландышы</h3>
-                                </div>
-                                <img src="./img/lookbok-item.jpg"
-                                     srcset="./img/lookbok-item.jpg 2x"
-                                     width="182"
-                                     height="255" alt="">
-                                <div class="text-uppercase">
-                                    СЕРЬГИ “ЛАНДЫШИ” 3
-                                </div>
-                                <div>
-                                    <i class="small">Золото 585 пробы</i>
-                                </div>
-                                <div class="collect-actions">
-                                    <div class="price">
-                                        80 000
-                                        <svg>
-                                            <use xlink:href="#Rub"></use>
-                                        </svg>
-                                    </div>
-                                    <a class="btn">
-                                        Купить
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="lookbook__item--ticket" data-ciaoyu-toggle='two2'>
-                                <div>
+            <div class="lookbook__item-wrapper swiper-slide" style="background: #657888">
+                <div class="lookbook__item">
+                    <div class="lookbook__item--holder">
+                        <div class="" data-ciaoyu-toggle='one2'>
+                            <div class="lookbook__item--ticket">
+                                <a href="" class="lookbook__item__caption">
                                     <span class="text-uppercase small">Коллекция</span>
                                     <h3 class="title">Ландыши</h3>
-                                </div>
-                                <img src="./img/lookbok-item.jpg"
-                                     srcset="./img/lookbok-item.jpg 2x"
-                                     width="182"
-                                     height="255" alt="">
-                                <div class="text-uppercase">
-                                    Кольцо “ЛАНДЫШ” 4
-                                </div>
+                                </a>
+                                <a href="" class="lookbook__item__img">
+                                    <img src="./img/lookbok-item.jpg"
+                                         srcset="./img/lookbok-item.jpg 2x"
+                                         width="182"
+                                         height="225" alt="">
+                                </a>
+                                <a href="" class="text-uppercase lookbook__item__title">
+                                    СЕРЬГИ “ЛАНДЫШИ” 3
+                                </a>
                                 <div>
                                     <i class="small">Золото 585 пробы</i>
                                 </div>
@@ -1180,62 +1183,93 @@
                             </div>
                         </div>
 
-                        <div class="lookbook__item--image arrows-holder">
-                            <img src="./img/lookbook1.png"
-                                 srcset="./img/lookbook1@2x.png 2x"
-                                 alt="">
-                            <form class="target-list">
-                                <label class="target active"
-                                       style="left: 33%; top: 54%;">
-                                    <input type='radio'
-                                           class="ciaoyu-toggle"
-                                           name='radio-buttons'
-                                           id="one2"
-                                           value="option1"
-                                           data-ciaoyu="toggle"
-                                           checked="checked">
-
-                                    <svg class="plus">
-                                        <use xlink:href="#Plus"></use>
-                                    </svg>
-                                    <svg class="minus">
-                                        <use xlink:href="#Minus"></use>
-                                    </svg>
-                                </label>
-
-                                <label class="target"
-                                       style="left: 56%; top: 73%;">
-                                    <input type='radio'
-                                           class="ciaoyu-toggle"
-                                           name='radio-buttons'
-                                           id="two2"
-                                           value="option1"
-                                           data-ciaoyu="toggle">
-                                    <svg class="plus">
-                                        <use xlink:href="#Plus"></use>
-                                    </svg>
-                                    <svg class="minus">
-                                        <use xlink:href="#Minus"></use>
-                                    </svg>
-                                </label>
-
-                            </form>
-                            <div class="arrow arrow__right">
-                                <svg>
-                                    <use xlink:href="#Arrow"></use>
-                                </svg>
+                        <div class="lookbook__item--ticket" data-ciaoyu-toggle='two2'>
+                            <a href="" class="lookbook__item__caption">
+                                <span class="text-uppercase small">Коллекция</span>
+                                <h3 class="title">Ландыши</h3>
+                            </a>
+                            <a href="" class="lookbook__item__img">
+                                <img src="./img/lookbok-item.jpg"
+                                     srcset="./img/lookbok-item.jpg 2x"
+                                     width="182"
+                                     height="225" alt="">
+                            </a>
+                            <a href="" class="text-uppercase lookbook__item__title">
+                                Кольцо “ЛАНДЫШ” 4
+                            </a>
+                            <div>
+                                <i class="small">Золото 585 пробы</i>
                             </div>
-                            <div class="arrow arrow__left">
-                                <svg>
-                                    <use xlink:href="#Arrow-l"></use>
-                                </svg>
+                            <div class="collect-actions">
+                                <div class="price">
+                                    80 000
+                                    <svg>
+                                        <use xlink:href="#Rub"></use>
+                                    </svg>
+                                </div>
+                                <a class="btn">
+                                    Купить
+                                </a>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="lookbook__item--image arrows-holder">
+                        <img src="./img/lookbook1.png"
+                             srcset="./img/lookbook1@2x.png 2x"
+                             alt="">
+                        <form class="target-list">
+                            <label class="target active"
+                                   style="left: 33%; top: 54%;">
+                                <input type='radio'
+                                       class="ciaoyu-toggle"
+                                       name='radio-buttons'
+                                       id="one2"
+                                       value="option1"
+                                       data-ciaoyu="toggle"
+                                       checked="checked">
+
+                                <svg class="plus">
+                                    <use xlink:href="#Plus"></use>
+                                </svg>
+                                <svg class="minus">
+                                    <use xlink:href="#Minus"></use>
+                                </svg>
+                            </label>
+
+                            <label class="target"
+                                   style="left: 56%; top: 73%;">
+                                <input type='radio'
+                                       class="ciaoyu-toggle"
+                                       name='radio-buttons'
+                                       id="two2"
+                                       value="option1"
+                                       data-ciaoyu="toggle">
+                                <svg class="plus">
+                                    <use xlink:href="#Plus"></use>
+                                </svg>
+                                <svg class="minus">
+                                    <use xlink:href="#Minus"></use>
+                                </svg>
+                            </label>
+
+                        </form>
+                        <div class="arrow arrow__right">
+                            <svg>
+                                <use xlink:href="#Arrow"></use>
+                            </svg>
+                        </div>
+                        <div class="arrow arrow__left">
+                            <svg>
+                                <use xlink:href="#Arrow-l"></use>
+                            </svg>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <div class="spacer"></div>
     <footer class="footer">
         <header>
@@ -1332,7 +1366,11 @@
                 <a href="tel:+74959560565" class="lighten-lnk phone-lnk">
                     +7 495 956-05-65
                 </a>
-                <a href="" class="btn">
+                <a href="javascript:void(0)"
+                   class="btn"
+                   data-izimodal-open="#modalCallback"
+                   data-izimodal-transitionin="fadeInDown"
+                >
                     Обратный звонок
                 </a>
             </nav>
@@ -1735,9 +1773,90 @@
             </svg>
         </svg>
     </div>
+    <!-- Modal-->
+    <div style="display: none">
+        <div id="modalQuestion">
+            <div class="modal-box">
+                <a href="javascript:void(0)" class="modal-box__close" data-izimodal-close=""></a>
+                <div class="modal-box__header">
+                    <span class="modal-box__caption">КАК УЗНАТЬ РАЗМЕР КОЛЬЦА</span>
+                </div>
+                <div class="modal-box__body">
+                    <div class="modal-box__body__razmer-row">
+                        <div class="modal-box__body__razmer-col">
+                            <div class="modal-box__body__razmer-col__imd">
+                                <img src="./img/pal1.png" width="26.5" height="64" alt="">
+                            </div>
+                            <span class="modal-box__body__razmer-col__text">
+                                Обмотайте ваш палец<br> ниткой или шнурком
+                            </span>
+                        </div>
+                        <div class="modal-box__body__razmer-col">
+                            <div class="modal-box__body__razmer-col__imd">
+                                <img src="./img/pal2.png" width="22.5" height="64" alt="">
+                            </div>
+                            <span class="modal-box__body__razmer-col__text">
+                                Замерьте полученную <br>длину нитки линейкой
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-box__footer">
+                    <form class="razmer-form">
+                        <span class="razmer-form__caption">Введите полученный результат в миллиметрах</span>
+                        <input type="text" class="razmer-form__inp js-razmer" name="razmer">
+                    </form>
+                    <div class="razmer-result">
+                        <span class="razmer-result__ok razmer-result__hidden">Размер кольца 18</span>
+                        <span class="razmer-result__error razmer-result__hidden">К сожалению, размеров, соответствующих этому значению, не найдено</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modalCallback">
+            <div class="modal-box">
+                <a href="javascript:void(0)" class="modal-box__close" data-izimodal-close=""></a>
+                <div class="modal-box__header">
+                    <span class="modal-box__caption">ОБРАТНЫЙ ЗВОНОК</span>
+                </div>
+                <div class="modal-box__body modal-form">
+                    <form id="formCallback" class="modal-form__wrap">
+
+                        <div class="modal-form__row">
+                            <label for="inp_name" class="modal-form__label">Имя</label>
+                            <input class="modal-form__inp" id="inp_name" type="text" required name="name" value=""
+                                   placeholder="Ваше имя">
+                        </div>
+                        <div class="modal-form__row">
+                            <label for="inp_tel" class="modal-form__label">Номер телефона</label>
+                            <input class="modal-form__inp modal-form__inp--tel" id="inp_tel" type="tel" required name="tel" value=""
+                                   placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _">
+                        </div>
+                        <div class="modal-form__submit">
+                            <div class="modal-form__submit__col2">
+                                <label class="chekbox">
+                                    <input type="checkbox" checked name="persona">
+                                    <span>Согласен на обработку <a href="" target="_blank">персональных данных</a></span>
+                                </label>
+                            </div>
+                            <div class="modal-form__submit__col2">
+                                <button type="submit" class="btn btn-submit">
+                                    ОТПРАВИТЬ
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="./js/wow.min.js"></script>
 <script src="./js/main2.js"></script>
+<script src="./js/iziModal.min.js"></script>
 <script src="./js/script.js"></script>
+<link rel="stylesheet" href="./css/iziModal.css">
 </body>
 </html>

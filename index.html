@@ -1082,7 +1082,7 @@
         <div class="spacer"></div>
         <section class="lookbook">
             <header class="caption-page">
-                <h2 class="text-center">Look Book</h2>
+                <h2 class="text-center wow animate__fadeInUp animate__delay-05s">Look Book</h2>
                 <div class="caption-page__border wow animate__zoomIn"></div>
             </header>
             <div class="lookbook__wrapper">
@@ -1439,7 +1439,11 @@
                 <a href="tel:+74959560565" class="lighten-lnk phone-lnk">
                     +7 495 956-05-65
                 </a>
-                <a href="" class="btn">
+                <a href="javascript:void(0)"
+                   class="btn"
+                   data-izimodal-open="#modalCallback"
+                   data-izimodal-transitionin="fadeInDown"
+                >
                     Обратный звонок
                 </a>
             </nav>
@@ -1708,7 +1712,9 @@
 
 
             </p>
-            <a href="" class="btn btn-total btn-black">Оформить заказ</a>
+            <a href="" class="btn btn-total btn-black">
+                Оформить заказ
+            </a>
         </div>
         <div class="cart__close" id="cart-close">
             <svg>
@@ -1839,10 +1845,53 @@
             </svg>
         </svg>
     </div>
+    <!-- Modal-->
+    <div style="display: none">
+        <div id="modalCallback">
+            <div class="modal-box">
+                <a href="javascript:void(0)" class="modal-box__close" data-izimodal-close=""></a>
+                <div class="modal-box__header">
+                    <span class="modal-box__caption">ОБРАТНЫЙ ЗВОНОК</span>
+                </div>
+                <div class="modal-box__body modal-form">
+                    <form id="formCallback" class="modal-form__wrap">
 
+                        <div class="modal-form__row">
+                            <label for="inp_name" class="modal-form__label">Имя</label>
+                            <input class="modal-form__inp" id="inp_name" type="text" required name="name" value=""
+                                   placeholder="Ваше имя">
+                        </div>
+                        <div class="modal-form__row">
+                            <label for="inp_tel" class="modal-form__label">Номер телефона</label>
+                            <input class="modal-form__inp modal-form__inp--tel" id="inp_tel" type="tel" required name="tel" value=""
+                                   placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _">
+                        </div>
+                        <div class="modal-form__submit">
+                            <div class="modal-form__submit__col2">
+                                <label class="chekbox">
+                                    <input type="checkbox" checked name="persona">
+                                    <span>Согласен на обработку <a href="" target="_blank">персональных данных</a></span>
+                                </label>
+                            </div>
+                            <div class="modal-form__submit__col2">
+                                <button type="submit" class="btn btn-submit">
+                                    ОТПРАВИТЬ
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="./js/wow.min.js"></script>
 <script src="./js/main2.js"></script>
+<script src="./js/iziModal.min.js"></script>
+<script src="./js/jquery.maskedinput.min.js"></script>
+<script src="./js/jquery.validate.min.js"></script>
 <script src="./js/script.js"></script>
+<link rel="stylesheet" href="./css/iziModal.css">
 </body>
 </html>
