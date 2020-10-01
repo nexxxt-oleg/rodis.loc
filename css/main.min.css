@@ -5410,7 +5410,8 @@ h2 > div {
     -webkit-transition: .35s ease-in-out 0.1s;
     transition: .35s ease-in-out 0.1s;
 }
-.like:hover {
+.like:hover,
+.like-ico:hover {
     -webkit-animation: like-hover-animate 0.3s; /* Safari 4+ */
     -moz-animation:    like-hover-animate 0.3s; /* Fx 5+ */
     -o-animation:      like-hover-animate 0.3s; /* Opera 12+ */
@@ -6567,7 +6568,7 @@ h2 > div {
     flex-grow: 0;
     padding: 20px;
     margin-bottom: 40px;
-    width: 100%;
+    width: 250px;
     background: #f6f4f0; /* Old browsers */
     background: -moz-linear-gradient(top,  #ffffff 0%, #f6f4f0 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f4f0 100%); /* Chrome10-25,Safari5.1-6 */
@@ -6637,10 +6638,14 @@ h2 > div {
 .catalog-list__item:hover .catalog-list__item--preview {
 
 }
+.catalog-list__item--details .btn {
+    position: relative;
+    z-index: 50;
+}
 @media (min-width: 768px) {
     .catalog-list__item.hover .catalog-list__item--details {
         opacity: 10;
-        right: -100%;
+        right: -80%;
         z-index: 1;
         padding-left: 20px;
         visibility: visible;
@@ -6657,7 +6662,7 @@ h2 > div {
         right: 0;
     }
     .catalog-list__item:nth-child(2n + 2):hover .catalog-list__item--details {
-        left: -100%;
+        left: -65%;
     }
     .catalog-list__item:nth-child(2n + 2) .catalog-list__item--details::after {
         right: auto;
@@ -6667,7 +6672,7 @@ h2 > div {
 @media (min-width: 1200px) {
     .catalog-list__item:hover .catalog-list__item--details {
         opacity: 10;
-        right: -100%;
+        right: -80%;
         z-index: 1;
         padding-left: 20px;
         visibility: visible;
@@ -6684,11 +6689,11 @@ h2 > div {
         right: 0;
     }
     .catalog-list__item:nth-child(4n + 4):hover .catalog-list__item--details {
-        left: -100%;
+        left: -65%;
     }
     .catalog-list__item:nth-child(4n + 4) .catalog-list__item--details::after {
         right: auto;
-        left: 100%;
+        left: 95%;
     }
 }
 
@@ -9393,5 +9398,8 @@ span.error {
     }
     .aboutus__tezis--item {
         min-height: 400px;
+    }
+    .modal-form__submit {
+        display: block !important;
     }
 }
