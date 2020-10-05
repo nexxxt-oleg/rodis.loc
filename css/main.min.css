@@ -7481,7 +7481,7 @@ h2 > div {
 
 .customer-review__cases-carousel {
     margin: 40px auto;
-    max-width: 1240px;
+    /*max-width: 1240px;*/
 }
 
 .customer-review__cases-carousel--item {
@@ -7500,12 +7500,13 @@ h2 > div {
 
 @media (min-width: 1200px) {
     .customer-review__cases-carousel--item {
-        width: 800px;
+        width: 820px;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         flex-direction: row;
-        margin: 0 40px;
+        margin: 0 60px;
     }
+
 }
 
 .customer-review__cases-carousel--item .img-holder {
@@ -7558,7 +7559,21 @@ h2 > div {
 }
 
 @media (min-width: 1200px) {
-    .customer-review__cases-carousel--item .case {
+    .owl-item .case {
+        display: none;
+    }
+    .owl-item .img-holder {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    .owl-item.active.case > div {
+        display: none;
+    }
+    .owl-item.active .img-holder {
+        margin-right: 0;
+    }
+    .owl-item.active.center .customer-review__cases-carousel--item  .case,
+    .owl-item.active .case {
         display: -webkit-box;
         display: flex;
         -webkit-box-orient: vertical;
@@ -7591,7 +7606,7 @@ h2 > div {
 }
 
 @media (min-width: 1200px) {
-    .customer-review__cases-carousel--item::before {
+    .owl-item.active.center .customer-review__cases-carousel--item::before {
         content: '“';
         font-family: 'Arsenal', 'Open Sans', Arial, sans-serif;
         font-weight: 600;
