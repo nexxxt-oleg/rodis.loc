@@ -6833,6 +6833,10 @@ h2 > div {
     display: -webkit-box;
     display: flex;
     position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .aboutus__item::before {
@@ -6910,86 +6914,74 @@ h2 > div {
 }
 
 .aboutus__item.aboutus-1 {
-    background: url("../img/aboutus-1.jpg") no-repeat center;
-    background-size: cover;
+    background-image: url("../img/bg_ab1.jpg");
+
 }
 
 @media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .aboutus__item.aboutus-1 {
-        background: url("../img/aboutus-1@2x.jpg") no-repeat center;
-        background-size: cover;
+        background-image: url("../img/bg_ab1@2x.jpg");
+
     }
 }
 
 .aboutus__item.aboutus-2 {
-    background: url("../img/aboutus-2.jpg") no-repeat center;
-    background-size: cover;
+    background-image: url("../img/bg_ab2.jpg");
 }
 
 @media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .aboutus__item.aboutus-2 {
-        background: url("../img/aboutus-2@2x.jpg") no-repeat center;
-        background-size: cover;
+        background-image: url("../img/bg_ab2@2x.jpg");
     }
 }
 
 .aboutus__item.aboutus-3 {
-    background: url("../img/aboutus-3.jpg") no-repeat center;
-    background-size: cover;
+    background-image: url("../img/bg_ab3.jpg");
 }
 
 @media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .aboutus__item.aboutus-3 {
-        background: url("../img/aboutus-3@2x.jpg") no-repeat center;
-        background-size: cover;
+        background-image: url("../img/bg_ab3@2x.jpg");
     }
 }
 
 .aboutus__item.aboutus-4 {
-    background: url("../img/aboutus-4.jpg") no-repeat center;
-    background-size: cover;
+    background-image: url("../img/bg_ab4.jpg") ;
 }
 
 @media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .aboutus__item.aboutus-4 {
-        background: url("../img/aboutus-4@2x.jpg") no-repeat center;
-        background-size: cover;
+        background-image: url("../img/bg_ab4@2x.jpg");
     }
 }
 
 .aboutus__item.aboutus-5 {
-    background: url("../img/aboutus-5.jpg") no-repeat center;
-    background-size: cover;
+    background-image: url("../img/bg_ab5.jpg") ;
 }
 
 @media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .aboutus__item.aboutus-5 {
-        background: url("../img/aboutus-5@2x.jpg") no-repeat center;
-        background-size: cover;
+        background-image: url("../img/bg_ab5@2x.jpg");
     }
 }
 
 .aboutus__item.aboutus-6 {
-    background: url("../img/aboutus-6.jpg") no-repeat center;
-    background-size: cover;
+    background-image: url("../img/bg_ab6.jpg") ;
 }
 
 @media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .aboutus__item.aboutus-6 {
-        background: url("../img/aboutus-6@2x.jpg") no-repeat center;
-        background-size: cover;
+        background-image: url("../img/bg_ab6@2x.jpg");
     }
 }
 
 .aboutus__item.aboutus-7 {
-    background: url("../img/aboutus-7.jpg") no-repeat center;
-    background-size: cover;
+    background-image: url("../img/bg_ab7.jpg") ;
 }
 
 @media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .aboutus__item.aboutus-7 {
-        background: url("../img/aboutus-7@2x.jpg") no-repeat center;
-        background-size: cover;
+        background-image: url("../img/bg_ab7@2x.jpg");
     }
 }
 
@@ -9228,7 +9220,13 @@ span.error {
 .parallax-mirror {
     z-index: 0 !important;
 }
-
+.aboutus__item .lside {
+    font-weight: bold;
+}
+.aboutus__item p {
+    font-weight: 300;
+    font-family: Roboto;
+}
 
 @media (min-width: 1200px) {
     .parallax-window {
