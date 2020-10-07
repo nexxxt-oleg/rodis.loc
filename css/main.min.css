@@ -6901,8 +6901,8 @@ h2 > div {
 }
 
 .aboutus__item--inner p {
-    font-size: 18px;
-    line-height: 1.25em;
+    font-size: 16px;
+    line-height: 1.4;
     margin-bottom: 30px;
 }
 
@@ -9258,7 +9258,7 @@ span.error {
 .parallax-container {
     position: relative;
     overflow: hidden;
-    height: 563px;
+    height: 600px;
 }
 .parallax-container .parallax {
     position: absolute;
