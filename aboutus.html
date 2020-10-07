@@ -512,8 +512,18 @@
         </div>
     </div>
 
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="./img/bg_ab1.jpg"></div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="./img/bg_ab2.jpg"></div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="./img/bg_ab3.jpg"></div>
+    </div>
     <div class="aboutus">
-        <div class="aboutus__item invert-colors abou parallax-sellar aboutus-1">
+        <div class="aboutus__item invert-colors aboutus-1 background-fix" data-speed="8" >
             <div class="aboutus__item--inner">
                 <div>
                     <header class="product-view__caption-box">
@@ -535,7 +545,7 @@
             </div>
         </div>
         <!--    -->
-        <div class="aboutus__item aboutus-2 parallax-sellar" >
+        <div class="aboutus__item aboutus-2 background-fix" data-speed="8" >
             <div class="aboutus__item--inner">
                 <div>
                     <header class="product-view__caption-box">
@@ -567,7 +577,7 @@
             </div>
         </div>
         <!--    -->
-        <div class="aboutus__item invert-colors aboutus-3" data-parallax="scroll" data-image-src="./img/aboutus-3.jpg">
+        <div class="aboutus__item invert-colors aboutus-3 background-fix" data-speed="8">
             <div class="aboutus__item--inner">
                 <div>
                     <header class="product-view__caption-box">
@@ -599,7 +609,7 @@
             </div>
         </div>
         <!--    -->
-        <div class="aboutus__item aboutus-4" data-parallax="scroll" data-image-src="./img/aboutus-4.jpg">
+        <div class="aboutus__item aboutus-4 background-fix" data-speed="8" >
             <div class="aboutus__item--inner">
                 <div>
                     <header class="product-view__caption-box">
@@ -1706,7 +1716,10 @@
 <script src="./js/iziModal.min.js"></script>
 <script src="./js/script.js"></script>
 <link rel="stylesheet" href="./css/iziModal.css">
-<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -1715,7 +1728,7 @@
                 naturalHeight: 630
             });*/
 
-
+            $('.parallax').parallax();
         }
     });
 
