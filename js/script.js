@@ -566,6 +566,18 @@ $(window).on("load", () => {
     });
 
     $('.modal-form__inp--tel').mask("+7 (999) 999-99-99");
+
+
+    $('.js-map-show').on('click', function() {
+        $('.stores__item__map').not($(this).data('map')).removeClass('is-active');
+        let activeMap = $(this).data('map');
+        if( $(activeMap).hasClass('is-active')) {
+            $(activeMap).removeClass('is-active');
+        } else {
+            $(activeMap).addClass('is-active');
+        }
+
+    });
 });
 
 var wow = new WOW(

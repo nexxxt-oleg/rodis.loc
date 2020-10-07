@@ -500,14 +500,14 @@ p {
 h1 {
     font-family: 'Arsenal', 'Open Sans', Arial, sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 34px;
     text-transform: uppercase;
     letter-spacing: -1px;
     word-spacing: 12px;
     line-height: 1.25;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
     h1 {
         font-size: 49px;
     }
@@ -4729,7 +4729,7 @@ input[type="checkbox"] {
     }
 
     .dd-header-menu .sub-nav {
-        left: -100%;
+        left: -110%;
         position: absolute;
         top: -1px;
         width: 100%;
@@ -6744,7 +6744,7 @@ h2 > div {
 }
 
 .collection__list {
-    max-width: 1240px;
+    max-width: 1270px;
     margin: 0 auto;
     display: -webkit-box;
     display: flex;
@@ -6757,6 +6757,7 @@ h2 > div {
     flex-shrink: 0;
     -webkit-box-flex: 0;
     flex-grow: 0;
+    padding: 0 15px;
 }
 
 .collection__list--item {
@@ -6779,16 +6780,14 @@ h2 > div {
 @media (min-width: 1200px) {
     .collection__list--item {
         width: calc(50% - 20px);
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        flex-direction: row;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
     .collection__list--item .item-img {
         -webkit-box-flex: 0;
         flex: 0 0 42%;
+        max-width: 42%;
     }
 }
 
@@ -6812,12 +6811,17 @@ h2 > div {
     padding: 40px 20px 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
     .collection__list--item .item-desc {
         -webkit-box-flex: 0;
         flex: 0 0 50%;
+        max-width: 50%;
     }
-
+    .collection__list--item {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+    }
 }
 
 .collection__list--item .item-desc h3 {
@@ -7766,7 +7770,7 @@ h2 > div {
     border-bottom: 1px solid #eee;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .personal-area__orders--item {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -8932,9 +8936,9 @@ ul, li {
     padding: 20px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .p20 {
-        padding: inherit;
+        padding: 15px;
     }
 }
 
@@ -9254,7 +9258,7 @@ span.error {
 .parallax-container {
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: 563px;
 }
 .parallax-container .parallax {
     position: absolute;
@@ -9276,6 +9280,53 @@ span.error {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
+.aboutus__background-fix {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    top: 0;
+}
+.share-lnk .social {
+    top: -5px;
+    left: 100%;
+    display: flex;
+    margin:0 0 0 30px ;
+}
+.share-lnk .social li {
+    padding:0 15px 0 0;
+}
+.stores__item > div {
+    position: relative;
+}
+.stores__item__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.stores__item__map__wrap {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+}
+[class*="ymaps-2"][class*="-ground-pane"] {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    /* Firefox 3.5+ */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+ & Safari 6+ */
+}
+.stores__item__map.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 @media (min-width: 1200px) {
     .parallax-window {
@@ -9300,7 +9351,8 @@ span.error {
     .header .top-menu,
     .footer__nav,
     .footer__social--inner,
-    .dd-header-menu {
+    .dd-header-menu,
+    .individual-faq {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -9312,6 +9364,31 @@ span.error {
     }
     .main-wrap__body {
         margin-bottom: 40px;
+    }
+    .parallax-container .parallax img {
+        opacity: 1;
+    }
+    .customer-review__product .img-holder {
+        width: 100%;
+    }
+    .individual__hero--inner {
+        min-height: 600px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .personal-area__orders--item table td:not(:last-child) {
+        width: auto;
+    }
+    .personal-area__orders--item table td.tech-data dl {
+        display: block;
+    }
+    .product-view__desc--tabs-content dt {
+        width: 100%;
+        padding-bottom: 0;
+    }
+    .product-view__desc--tabs-content dd {
+        width: 100%;
+        padding-bottom: 2px;
     }
 
 }
@@ -9407,6 +9484,42 @@ span.error {
     .aboutus__teaser {
         padding: 0 15px;
     }
+    .catalog-list__item--details {
+        width: 100%;
+    }
+    .catalog-list__item--details .btn {
+        max-width: 468px;
+        margin: 0 auto;
+    }
+    .news-main {
+        justify-content: center;
+    }
+    .news-main__item--img {
+        height: auto;
+    }
+    .personal-area__orders--item h3 {
+        padding-top: 10px;
+    }
+    .personal-area__orders--item table,
+    .personal-area__orders--item table tbody,
+    .personal-area__orders--item table tr,
+    .personal-area__orders--item table td {
+        display: block;
+        width: 100% !important;
+    }
+    .personal-area__orders--item table td.tech-data {
+        display: none !important;
+    }
+    .personal-area__orders--item table td.text-center {
+        text-align: left;
+        padding: 0 0 5px 0;
+    }
+    .personal-area__orders--item table td.text-center br {
+        display: none;
+    }
+    .personal-area__orders--item table {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -9449,4 +9562,20 @@ span.error {
     .modal-form__submit {
         display: block !important;
     }
+    .parallax-container {
+        height: 700px;
+    }
+    h1 {
+        font-size: 24px;
+        word-spacing: normal;
+    }
+    .personal-area .tabs-list {
+        width: 180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .personal-area .tabs-list > li {
+        margin-bottom: 10px;
+    }
+
 }
