@@ -9326,7 +9326,19 @@ span.error {
     opacity: 1;
     visibility: visible;
 }
-
+.catalog-list__item__img {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.catalog-list__item__img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+}
 
 @media (min-width: 1200px) {
     .parallax-window {

@@ -183,6 +183,16 @@ $(document).ready(function () {
     });
 
 
+    var swiper = new Swiper('.catalog-list__item__slider .swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+    });
+
+    //
+
+
     const heroSwiper = new Swiper('.hero.swiper-container', {
         loop: true,
         speed: 2000,
