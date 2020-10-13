@@ -5515,8 +5515,16 @@ h2 > div {
     z-index: 1;
     text-align: center;
 }
+.catalog-list__item__slider .owl-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    z-index: 1;
+    text-align: center;
+}
 
-.gift-collection .owl-dots .owl-dot {
+.gift-collection .owl-dots .owl-dot,
+.catalog-list__item__slider .owl-dots  .owl-dot {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -5527,7 +5535,8 @@ h2 > div {
     transition: .35s linear;
 }
 
-.gift-collection .owl-dots .owl-dot.active {
+.gift-collection .owl-dots .owl-dot.active,
+.catalog-list__item__slider .owl-dots  .owl-dot.active {
     background: #1d1d1b;
 }
 
@@ -9331,14 +9340,26 @@ span.error {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 50px 30px;
 }
 .catalog-list__item__img img {
     display: block;
     max-width: 100%;
     height: auto;
     max-height: 100%;
-    width: auto;
+    width: auto !important;
 }
+.catalog-list__item__slider {
+    height: 300px;
+    position: relative;
+}
+.catalog-list__item:nth-child(2n+1) .catalog-list__item--preview .like-ico {
+    right: auto;
+    left: 40px;
+}
+
+
+
 
 @media (min-width: 1200px) {
     .parallax-window {

@@ -183,11 +183,11 @@ $(document).ready(function () {
     });
 
 
-    var swiper = new Swiper('.catalog-list__item__slider .swiper-container', {
-        pagination: {
-            el: '.swiper-pagination',
-            dynamicBullets: true,
-        },
+    $('.js-slider-product').owlCarousel({
+        loop: true,
+        nav: false,
+        items: 1,
+        dots: true
     });
 
     //
