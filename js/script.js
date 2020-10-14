@@ -492,6 +492,15 @@ $(window).on("load", () => {
                 },
             })
         }
+        if ($('.js-mob-slider-review').length){
+            $('.js-mob-slider-review').owlCarousel({
+                loop: true,
+                nav: false,
+                items: 1,
+                dots: true
+            });
+            console.log('2222');
+        }
 
 
     } else {
