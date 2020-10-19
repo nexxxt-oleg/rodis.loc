@@ -6076,6 +6076,7 @@ h2 > div {
     padding: 30px;
     display: -webkit-box;
     display: flex;
+    flex-basis: 690px;
 }
 
 @media (min-width: 1200px) {
