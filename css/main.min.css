@@ -6076,7 +6076,8 @@ h2 > div {
     padding: 30px;
     display: -webkit-box;
     display: flex;
-    flex-basis: 690px;
+    flex-basis: 620px;
+    min-width: 620px;
 }
 
 @media (min-width: 1200px) {
@@ -6123,6 +6124,7 @@ h2 > div {
 @media (min-width: 1200px) {
     .product-view__desc {
         position: relative;
+        flex-basis: 710px;
     }
 }
 
@@ -9635,5 +9637,9 @@ span.error {
     .customer-review__product__slider {
         width: 100%;
         z-index: 1;
+    }
+    .product-view__item {
+        flex-basis: 100%;
+        min-width: 100%;
     }
 }
